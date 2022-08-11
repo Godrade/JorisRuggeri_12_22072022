@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-horizontal {
+  height: 90px;
+  background-color: #020203;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0;
+    margin: 0 80px 0 20px;
+
+    height: 100%;
+    list-style-type: none;
+
+    li {
+      cursor: pointer;
+
+      color: white;
+      font-size: 24px;
+    }
+  }
+}
+
+.nav-vertical {
+  width: 120px;
+  position: fixed;
+  height: calc(100vh - 90px);
+
+  background-color: #020203;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      background-color: white;
+      border-radius: 6px;
+      width: 64px;
+      height: 64px;
+      padding: 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        transition: 0.5s;
+        background-color: rgb(226, 226, 226);
+      }
+    }
+  }
+
+  p {
+    width: 120px;
+    transform: rotate(271deg);
+    color: white;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+// MAIN
+main {
+  margin: 70px 90px 85px 230px;
+}
+
+.title {
+  font-size: 48px;
+
+  .title-name {
+    color: #FF0101;
+  }
+}
+
+.objectif-success {
+  font-size: 18px;
+}
