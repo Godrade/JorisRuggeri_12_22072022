@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './App.scss';
 import reportWebVitals from './reportWebVitals';
 
-import { Header } from './pages/layouts/header';
-import { Home } from './pages/home/home';
+import { Header } from './pages/layouts/Header';
+import { Home } from './pages/home/Home';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

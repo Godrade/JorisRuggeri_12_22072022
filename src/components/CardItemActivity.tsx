@@ -1,4 +1,4 @@
-export const CardIcon = ({ iconLink, number, type, name }) => {
+export const CardItemActivity = ({ iconLink, number, type, name }) => {
     return (
         <div className="card-content">
             <div className="card-icon">
