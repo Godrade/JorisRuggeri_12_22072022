@@ -3,7 +3,7 @@ import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Legend, Tooltip, Responsive
 
 import { BarChartCustomTooltip } from './BarChartCustomToolTip';
 
-import { Activity, getUserActivityAPI } from '../service/getActivity';
+import { Activity, getUserActivityAPI } from '../../../service/getActivity';
 
 export const BarChartGraph = () => {
 
@@ -21,7 +21,7 @@ export const BarChartGraph = () => {
       if (!stats) return null;
 
     return (
-        <div className="col-12 col-sm-12 col-md-12 col-lg-6	col-xl-9 col-xxl-9">
+        <div className="col-12">
             <div className="bar-graph">
                 <div className="graph-1">
                     <ResponsiveContainer width="100%" height={250}>

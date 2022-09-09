@@ -144,6 +144,28 @@ main {
 }
 
 
+.custom-tooltip-linebar {
+  background-color: white;
+  color: black;
+  text-align: center;
+
+  border: 1px solid transparent;
+
+  .label  {
+    padding: 5px 5px;
+  }
+}
+
+.bg-red {
+  border-radius: 5px;
+  background-color: #FF0000;
+}
+
+.bg-gray {
+  border-radius: 5px;
+  background-color: #282D30;
+}
+
 .card-content {
   background: #FBFBFB;
   align-items: center;

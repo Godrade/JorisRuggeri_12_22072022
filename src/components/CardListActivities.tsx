@@ -8,7 +8,7 @@ import iconFat from "../images/icon/fat-icon.svg";
 
 export const CardListActivities = ({ user }) => {
     return (
-        <div className="col-12 col-sm-12 col-md-12 col-lg-6	col-xl-3 col-xxl-3">
+        <div className="col-12">
             <CardItemActivity iconLink={iconCalories} number={user.keyData.calorieCount} type="kCal" name='Calories' />
             <CardItemActivity iconLink={iconProtein} number={user.keyData.proteinCount} type="g" name='Proteines' />
             <CardItemActivity iconLink={iconCarbs} number={user.keyData.carbohydrateCount} type="g" name='Glucides' />
