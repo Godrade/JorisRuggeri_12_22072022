@@ -4,6 +4,7 @@ import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Legend, Tooltip, Responsive
 import { BarChartCustomTooltip } from './BarChartCustomToolTip';
 
 import { Activity, getUserActivityAPI } from '../../../service/getActivity';
+import { getByDisplayValue } from '@testing-library/react';
 
 export const BarChartGraph = () => {
 
@@ -26,7 +27,12 @@ export const BarChartGraph = () => {
                 <div className="graph-1">
                     <ResponsiveContainer width="100%" height={250}>
                         <BarChart height={250} data={stats.sessions}>
-                        <XAxis dataKey="day" />
+                        <XAxis dataKey="day" tickFormatter={(value:any, index:number) => {
+                          const day = new Date(value);
+                          console.log(value);
+                          
+                          return String(day.getDate());
+                        }} />
                         <YAxis orientation="right" />
                         <Legend verticalAlign="top" align="right"  />
                         <Tooltip content={<BarChartCustomTooltip payload={stats} active={stats} />} />

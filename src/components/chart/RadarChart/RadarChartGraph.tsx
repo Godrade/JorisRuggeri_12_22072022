@@ -23,7 +23,7 @@ export const RadarChartGraph = () => {
             <ResponsiveContainer width="100%" height={250} className="bg-gray">
                 <RadarChart outerRadius={90} width={730} height={250} data={stats.data}>
                     <PolarGrid />
-                    <PolarAngleAxis dataKey="kind" stroke="white"/>
+                    <PolarAngleAxis dataKey="kind" stroke="white" tickFormatter={(value:any, index:number) => stats.kind[value]}/>
                     <PolarRadiusAxis angle={30} />
                     <Radar name="Mike" dataKey="value" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.6} />
                 </RadarChart>

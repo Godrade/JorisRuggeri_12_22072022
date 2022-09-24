@@ -5,6 +5,7 @@ export interface User {
         carbohydrateCount: number,
         lipidCount: number
     }
+    todayScore: number,
     userInfos: {
         firstName: string
     }

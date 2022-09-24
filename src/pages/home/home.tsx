@@ -7,6 +7,7 @@ import { UserInfo } from "./UserInfo";
 
 import { RadarChartGraph } from "../../components/chart/RadarChart/RadarChartGraph";
 import { LineChartGraph } from "../../components/chart/LineChart/LineChartGraph";
+import { RadialChartGraph } from "../../components/chart/RadialChart/RadialChartGraph";
 
 import { User } from "../../service/getUser";
 
@@ -38,6 +39,7 @@ export const Home = () => {
                   <div className="row mt-3">
                     <LineChartGraph />
                     <RadarChartGraph />
+                    <RadialChartGraph user={user} />
                   </div>
                 </div>
                 <div className="col-3">
