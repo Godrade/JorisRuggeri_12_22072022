@@ -112,17 +112,14 @@ main {
 // GRAPH
 .bar-graph {
   position: relative;
-  margin-top: 80px;
-  height: 320px;
+  padding-top: 80px;
   
   background-color: #FBFBFB;
-  border: 1px solid black;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
 }
 
 .graph-1 {
-
   .recharts-default-legend {
     top: -50px;
     position: absolute;
@@ -154,6 +151,11 @@ main {
   .label  {
     padding: 5px 5px;
   }
+}
+
+.bg-gray-light {
+  border-radius: 5px;
+  background-color: #FBFBFB;
 }
 
 .bg-red {
@@ -190,5 +192,42 @@ main {
       color: #74798C;
       font-size: 14px;
     }
+  }
+}
+
+.custom-legend-pie {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.score-number {
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+}
+
+.custom-legend-pie p {
+  color: #74798c;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 1440px) {
+  .graphic-objective {
+    width: 258px;
+    height: 263px;
+  }
+
+  .custom-legend-pie {
+    width: 131px;
+    height: 131px;
+    margin-left: 32.5%;
   }
 }

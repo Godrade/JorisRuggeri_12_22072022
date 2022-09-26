@@ -7,9 +7,9 @@ import { UserInfo } from "./UserInfo";
 
 import { RadarChartGraph } from "../../components/chart/RadarChart/RadarChartGraph";
 import { LineChartGraph } from "../../components/chart/LineChart/LineChartGraph";
-import { RadialChartGraph } from "../../components/chart/RadialChart/RadialChartGraph";
 
-import { User } from "../../service/getUser";
+import { User } from "../../models/User";
+import { PieChartObjective } from "../../components/chart/PieChart/PieChartGraph";
 
 export const Home = () => {
     const [user, setUser] = useState<User | null>(null)
@@ -28,7 +28,7 @@ export const Home = () => {
         <React.Fragment>
             <section className="container-fluid">
               <div className="row">
-                <UserInfo user={user.userInfos.firstName} />
+                <UserInfo user={user.firstName} />
               </div>
             </section>
             
@@ -39,7 +39,7 @@ export const Home = () => {
                   <div className="row mt-3">
                     <LineChartGraph />
                     <RadarChartGraph />
-                    <RadialChartGraph user={user} />
+                    <PieChartObjective userData={user} />
                   </div>
                 </div>
                 <div className="col-3">

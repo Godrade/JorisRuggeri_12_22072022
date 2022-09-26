@@ -1,13 +1,16 @@
 # Getting Started
 
-NodeJS     : 
-ReactJS    : 
-TypeScript : 
+NodeJS     : v16.11.45\
+ReactJS    : v18.0.15\
+TypeScript : v4.7.4\
+\
+IDE : Visual Studio Code\
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\
