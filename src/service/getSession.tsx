@@ -1,16 +1,23 @@
-//import { Session } from "../models/Session"
+import { Session } from "../models/Session"
 
 export interface SessionAPI {
-    sessions: {
-        day: number,
-        sessionLength: number
-    }[]
+    day: number,
+    sessionLength: number
 }
 
-export const getUserSessionAPI = async ():Promise<SessionAPI> => {
-    const response = await fetch('http://localhost:3000/user/12/average-sessions').then((response) => response.json())
+export interface SessionsAPI {
+    sessions: SessionAPI[]
+}
 
-    console.log('API', response);
-    //return response.data.sessions.map(session => new Session(session))
-    return response.data
+export const getUserSessionAPI = async ():Promise<Session[]> => {
+    const response = await fetch('http://localhost:3000/user/12/average-sessions').then((response) => response.json()).then((response) => response.data)
+    // const response = await fetch('data/averageSessionData.json',{
+    //     headers : { 
+    //       'Content-Type': 'application/json',
+    //       'Accept': 'application/json'
+    //      }
+    //   }).then((response) => {  
+    //     return response.json();
+    // })
+    return response.sessions.map((session) => new Session(session))
 }

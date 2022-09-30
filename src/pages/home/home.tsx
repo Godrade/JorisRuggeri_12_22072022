@@ -9,7 +9,7 @@ import { RadarChartGraph } from "../../components/chart/RadarChart/RadarChartGra
 import { LineChartGraph } from "../../components/chart/LineChart/LineChartGraph";
 
 import { User } from "../../models/User";
-import { PieChartObjective } from "../../components/chart/PieChart/PieChartGraph";
+import { PieChartGraph } from "../../components/chart/PieChart/PieChartGraph";
 
 export const Home = () => {
     const [user, setUser] = useState<User | null>(null)
@@ -39,7 +39,7 @@ export const Home = () => {
                   <div className="row mt-3">
                     <LineChartGraph />
                     <RadarChartGraph />
-                    <PieChartObjective userData={user} />
+                    <PieChartGraph todayScore={user.todayScore} />
                   </div>
                 </div>
                 <div className="col-3">

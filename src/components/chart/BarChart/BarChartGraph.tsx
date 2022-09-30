@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 
-import { BarChartCustomTooltip } from './BarChartCustomToolTip';
-
-import { Activity, getUserActivityAPI } from '../../../service/getActivity';
+import { getUserActivityAPI } from '../../../service/getActivity';
+import { Activity } from '../../../models/Activity';
 
 export const BarChartGraph = () => {
 
-    const [stats, setStats] = useState<Activity | null>(null)
+    const [stats, setStats] = useState<Activity[]>([])
 
       useEffect(() => {
         async function fetchData() {
@@ -18,18 +17,28 @@ export const BarChartGraph = () => {
         fetchData();
         
       }, [])
-      if (!stats) return null;
+      if (stats.length === 0) return null;
+
+      const BarChartCustomTooltip = ({ active, payload }) => {
+        if (active && payload && payload.length) {            
+          return (
+            <div className="custom-tooltip">
+              <p className="label">{payload[0].payload.kilogram}kg</p>
+              <p className="label">{payload[0].payload.calories}Kcal</p>
+            </div>
+          );
+        }
+      
+        return null;
+      };
 
     return (
         <div className="col-12">
             <div className="bar-graph">
                 <div className="graph-1">
                     <ResponsiveContainer width="100%" height={250}>
-                        <BarChart height={250} data={stats.sessions}>
-                        <XAxis dataKey="day" tickFormatter={(value:any, index:number) => {
-                          const day = new Date(value);
-                          return String(day.getDate());
-                        }} />
+                        <BarChart height={250} data={stats}>
+                        <XAxis dataKey="day" />
                         <YAxis orientation="right" />
                         <Legend verticalAlign="top" align="right"  />
                         <Tooltip content={<BarChartCustomTooltip payload={stats} active={stats} />} wrapperStyle={{ outline: 'none' }} />

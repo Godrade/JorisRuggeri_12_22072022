@@ -4,7 +4,7 @@ NodeJS     : v16.11.45\
 ReactJS    : v18.0.15\
 TypeScript : v4.7.4\
 \
-IDE : Visual Studio Code\
+IDE : Visual Studio Code
 
 ## Available Scripts
 

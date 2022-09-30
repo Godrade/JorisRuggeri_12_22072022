@@ -1,3 +1,4 @@
+import propTypes from 'prop-types';
 import { CardItemActivity } from "./CardItemActivity"
 
 //Import Icon
@@ -20,4 +21,13 @@ export const CardListActivities = ({ user }:CardListActivitiesProps) => {
             <CardItemActivity iconLink={iconFat} number={user.lipidCount} type="g" name='Lipides' />
         </div>
     )
+}
+
+CardListActivities.propTypes = {
+    user : propTypes.shape({
+        calorieCount: propTypes.number,
+        proteinCount: propTypes.number,
+        carbohydrateCount: propTypes.number,
+        lipidCount: propTypes.number
+    })
 }
