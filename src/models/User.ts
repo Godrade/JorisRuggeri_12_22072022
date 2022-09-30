@@ -1,4 +1,4 @@
-import { UserAPI } from "../service/getUser";
+import {UserAPI} from "../service/getUser";
 
 export class User {
 
@@ -9,7 +9,7 @@ export class User {
     carbohydrateCount: number;
     lipidCount: number;
 
-    constructor(data:UserAPI){
+    constructor(data: UserAPI) {
         this.firstName = data.userInfos.firstName;
         this.todayScore = data.todayScore;
         this.calorieCount = data.keyData.calorieCount;

@@ -1,4 +1,4 @@
-import { Performance } from "../models/Performance"
+import {Performance} from "../models/Performance"
 
 export interface PerformanceAPI {
     data: PerformanceDataAPI[],
@@ -17,7 +17,7 @@ export interface PerformanceDataAPI {
     kind: number
 }
 
-export const getUserPerformanceAPI = async ():Promise<Performance[]> => {
+export const getUserPerformanceAPI = async (): Promise<Performance[]> => {
     const response = await fetch('http://localhost:3000/user/12/performance').then((response) => response.json()).then((response) => response.data)
     // const response = await fetch('data/performanceData.json',{
     //     headers : { 
@@ -27,5 +27,5 @@ export const getUserPerformanceAPI = async ():Promise<Performance[]> => {
     //   }).then((response) => {  
     //     return response.json();
     // })
-    return response.data.map((performance) => new Performance(performance, response.kind)) 
+    return response.data.map((performance) => new Performance(performance, response.kind))
 }

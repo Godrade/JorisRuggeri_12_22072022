@@ -1,4 +1,4 @@
-import { Activity } from "../models/Activity"
+import {Activity} from "../models/Activity"
 
 export interface ActivitySessionsAPI {
     sessions: ActivityAPI[]
@@ -10,7 +10,7 @@ export interface ActivityAPI {
     calories: number
 }
 
-export const getUserActivityAPI = async ():Promise<Activity[]> => {
+export const getUserActivityAPI = async (): Promise<Activity[]> => {
     const response = await fetch('http://localhost:3000/user/12/activity').then((response) => response.json()).then((response) => response.data)
     // const response = await fetch('data/activityData.json',{
     //     headers : { 
