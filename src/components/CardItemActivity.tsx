@@ -1,13 +1,5 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-/**
- *
- * @param iconLink
- * @param number
- * @param type
- * @param name
- * @constructor
- */
 export const CardItemActivity = ({iconLink, number, type, name}) => {
     return (
         <div className="card-content">
@@ -23,8 +15,8 @@ export const CardItemActivity = ({iconLink, number, type, name}) => {
 }
 
 CardItemActivity.prototype = {
-    iconLink: propTypes.string,
-    number: propTypes.number,
-    type: propTypes.string,
-    name: propTypes.string
+    iconLink: PropTypes.string,
+    number: PropTypes.number,
+    type: PropTypes.string,
+    name: PropTypes.string
 }

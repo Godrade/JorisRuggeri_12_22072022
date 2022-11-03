@@ -1,5 +1,8 @@
 import {ActivityAPI} from "../service/getActivity"
 
+/**
+ * Class representing an activity
+ */
 export class Activity {
     day: string;
     kilogram: number;
@@ -12,8 +15,9 @@ export class Activity {
     }
 
     /**
-     *
-     * @param day
+     * 
+     * @param {string} day 
+     * @return {string}
      */
     getDate(day: string) {
         const date = new Date(day)

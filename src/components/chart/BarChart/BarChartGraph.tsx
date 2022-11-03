@@ -10,8 +10,12 @@ export const BarChartGraph = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await getUserActivityAPI();
-            setStats(data)
+            try {
+                const data = await getUserActivityAPI();
+                setStats(data)
+            } catch(err){
+                console.error('[Activity API] Une erreur est survenue');
+            }
 
         }
 

@@ -1,5 +1,8 @@
 import {PerformanceDataAPI} from "../service/getPerformance";
 
+/**
+ * Class representing an Performance
+ */
 export class Performance {
     value: number;
     kind: string;

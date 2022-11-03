@@ -11,8 +11,12 @@ export const RadarChartGraph = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await getUserPerformanceAPI();
-            setStats(data)
+            try {
+                const data = await getUserPerformanceAPI();
+                setStats(data)
+            } catch(err){
+                console.error('[Performance API] Une erreur est survenue');
+            }
         }
 
         fetchData();

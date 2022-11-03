@@ -1,5 +1,8 @@
 import {UserAPI} from "../service/getUser";
 
+/**
+ * Class representing an User
+ */
 export class User {
 
     firstName: string;

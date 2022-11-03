@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes  from 'prop-types';
 import {CardItemActivity} from "./CardItemActivity"
 
 //Import Icon
@@ -12,11 +12,6 @@ interface CardListActivitiesProps {
     user: User
 }
 
-/**
- *
- * @param user
- * @constructor
- */
 export const CardListActivities = ({user}: CardListActivitiesProps) => {
     return (
         <div className="col-12">
@@ -29,10 +24,10 @@ export const CardListActivities = ({user}: CardListActivitiesProps) => {
 }
 
 CardListActivities.propTypes = {
-    user: propTypes.shape({
-        calorieCount: propTypes.number,
-        proteinCount: propTypes.number,
-        carbohydrateCount: propTypes.number,
-        lipidCount: propTypes.number
+    user: PropTypes.shape({
+        calorieCount: PropTypes.number,
+        proteinCount: PropTypes.number,
+        carbohydrateCount: PropTypes.number,
+        lipidCount: PropTypes.number
     })
 }

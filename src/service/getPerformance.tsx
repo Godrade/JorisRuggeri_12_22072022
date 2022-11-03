@@ -17,8 +17,12 @@ export interface PerformanceDataAPI {
     kind: number
 }
 
+/**
+ * Functions to fetch the data from the backend API or from the mock data
+ * @return {Promise<Performance>} Promise representing performance data
+ */
 export const getUserPerformanceAPI = async (): Promise<Performance[]> => {
-    const response = await fetch('http://localhost:3000/user/12/performance').then((response) => response.json()).then((response) => response.data)
+    const response = await fetch('http://localhost:3000/user/12/performance').then((response) => response.json()).catch(test => {console.log(1);}).then((response) => response.data)
     // const response = await fetch('data/performanceData.json',{
     //     headers : { 
     //       'Content-Type': 'application/json',

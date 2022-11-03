@@ -16,8 +16,12 @@ export const Home = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await getUserAPI();
-            setUser(data)
+            try {
+                const data = await getUserAPI();
+                setUser(data)
+            } catch(err){
+                console.error('[USER API] Une erreur est survenue');
+            }
         }
 
         fetchData();

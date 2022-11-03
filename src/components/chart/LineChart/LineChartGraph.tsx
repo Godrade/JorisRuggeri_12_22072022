@@ -10,8 +10,12 @@ export const LineChartGraph = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await getUserSessionAPI();
+            try {
+                const data = await getUserSessionAPI();
             setStats(data);
+            } catch(err){
+                console.error('[Session API] Une erreur est survenue');
+            }
         }
 
         fetchData();

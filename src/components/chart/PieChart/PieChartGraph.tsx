@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {Legend, ResponsiveContainer, PieChart, Pie} from 'recharts';
 
 export const PieChartGraph = ({todayScore}) => {
@@ -36,5 +36,5 @@ export const PieChartGraph = ({todayScore}) => {
 }
 
 PieChartGraph.propTypes = {
-    todayScore: propTypes.number,
+    todayScore: PropTypes.number,
 };
