@@ -6,6 +6,10 @@ TypeScript : v4.7.4\
 \
 IDE : Visual Studio Code
 
+## Installation
+To run it locally, you need to install the back-end, you just have to follow the instructions in the next link. https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard \
+Fork this repository and lauch the back-end with yarn start or npm start.
+
 ## Available Scripts
 
 In the project directory, you can run:
