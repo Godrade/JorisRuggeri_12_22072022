@@ -3,6 +3,7 @@ import {PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Responsiv
 
 import {getUserPerformanceAPI} from '../../../service/getPerformance';
 import {Performance} from '../../../models/Performance';
+import { toast } from 'react-toastify';
 
 
 export const RadarChartGraph = () => {
@@ -15,7 +16,16 @@ export const RadarChartGraph = () => {
                 const data = await getUserPerformanceAPI();
                 setStats(data)
             } catch(err){
-                console.error('[Performance API] Une erreur est survenue');
+                toast.error('[Performance API] Une erreur est survenue', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
         }
 

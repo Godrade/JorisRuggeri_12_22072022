@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import { toast } from 'react-toastify';
 import {Line, LineChart, ResponsiveContainer, Tooltip, XAxis} from 'recharts';
 import {Session} from '../../../models/Session';
 
@@ -14,7 +15,16 @@ export const LineChartGraph = () => {
                 const data = await getUserSessionAPI();
             setStats(data);
             } catch(err){
-                console.error('[Session API] Une erreur est survenue');
+                toast.error('[Session API] Une erreur est survenue', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
         }
 

@@ -3,6 +3,7 @@ import {BarChart, Bar, CartesianGrid, XAxis, YAxis, Legend, Tooltip, ResponsiveC
 
 import {getUserActivityAPI} from '../../../service/getActivity';
 import {Activity} from '../../../models/Activity';
+import { toast } from 'react-toastify';
 
 export const BarChartGraph = () => {
 
@@ -14,7 +15,16 @@ export const BarChartGraph = () => {
                 const data = await getUserActivityAPI();
                 setStats(data)
             } catch(err){
-                console.error('[Activity API] Une erreur est survenue');
+                toast.error('[Activity API] Une erreur est survenue', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
 
         }

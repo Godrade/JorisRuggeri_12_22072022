@@ -11,6 +11,9 @@ import {LineChartGraph} from "../../components/chart/LineChart/LineChartGraph";
 import {User} from "../../models/User";
 import {PieChartGraph} from "../../components/chart/PieChart/PieChartGraph";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const Home = () => {
     const [user, setUser] = useState<User | null>(null)
 
@@ -20,7 +23,16 @@ export const Home = () => {
                 const data = await getUserAPI();
                 setUser(data)
             } catch(err){
-                console.error('[USER API] Une erreur est survenue');
+                toast.error('[USER API] Une erreur est survenue', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
         }
 

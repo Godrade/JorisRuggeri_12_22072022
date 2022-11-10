@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { Header } from './pages/layouts/Header';
 import { Home } from './pages/home/Home';
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,6 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Header />
+    <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
     <main>
       <Home />
     </main>
