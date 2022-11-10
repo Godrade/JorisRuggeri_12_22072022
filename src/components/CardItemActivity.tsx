@@ -14,7 +14,7 @@ export const CardItemActivity = ({iconLink, number, type, name}) => {
     )
 }
 
-CardItemActivity.prototype = {
+CardItemActivity.propTypes = {
     iconLink: PropTypes.string,
     number: PropTypes.number,
     type: PropTypes.string,
