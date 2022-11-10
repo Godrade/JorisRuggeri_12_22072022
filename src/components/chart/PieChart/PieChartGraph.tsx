@@ -17,7 +17,7 @@ export const PieChartGraph = ({todayScore}) => {
     );
 
     return (
-        <div className="col-12 col-sm-12 col-md-12 col-lg-6	col-xl-4 col-xxl-4">
+        <div className="col-md-12 col-xl-4 mb-md-3 mt-md-3">
             <ResponsiveContainer width="100%" height="100%" className="bg-gray-light">
                 <PieChart>
                     <text x="15%" y="10%" fill="#20253A" textAnchor="middle" dominantBaseline="central">

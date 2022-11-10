@@ -39,7 +39,7 @@ export const Home = () => {
 
             <section className="container-fluid">
                 <div className="row">
-                    <div className="col-9">
+                    <div className="col-md-12 col-xl-9">
                         <BarChartGraph/>
                         <div className="row mt-3">
                             <LineChartGraph/>
@@ -47,7 +47,7 @@ export const Home = () => {
                             <PieChartGraph todayScore={user.todayScore}/>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-12 col-xl-3">
                         <CardListActivities user={user}/>
                     </div>
                 </div>

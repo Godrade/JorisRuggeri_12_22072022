@@ -41,6 +41,7 @@ export const BarChartGraph = () => {
         <div className="col-12">
             <div className="bar-graph">
                 <div className="graph-1">
+                    <p id="bar-title">Activité quotidienne</p>
                     <ResponsiveContainer width="100%" height={250}>
                         <BarChart height={250} data={stats}>
                             <XAxis dataKey="day"/>

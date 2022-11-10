@@ -125,6 +125,14 @@ main {
     position: absolute;
     right: 50px;
   }
+
+  #bar-title {
+    position: relative;
+    bottom: 6px;
+    left: 45px;
+    font-weight: bold;
+
+  }
 }
 
 
@@ -229,5 +237,17 @@ main {
     width: 131px;
     height: 131px;
     margin-left: 32.5%;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .recharts-legend-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .custom-legend-pie {
+    height: 120px;
+    width: 120px;
   }
 }
