@@ -15,16 +15,7 @@ export const LineChartGraph = () => {
                 const data = await getUserSessionAPI();
             setStats(data);
             } catch(err){
-                toast.error('[Session API] Une erreur est survenue', {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
+                toast.error('[Session API] Une erreur est survenue');
             }
         }
 

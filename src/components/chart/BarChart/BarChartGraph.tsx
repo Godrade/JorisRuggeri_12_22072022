@@ -15,16 +15,7 @@ export const BarChartGraph = () => {
                 const data = await getUserActivityAPI();
                 setStats(data)
             } catch(err){
-                toast.error('[Activity API] Une erreur est survenue', {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
+                toast.error('[Activity API] Une erreur est survenue');
             }
 
         }

@@ -5,7 +5,9 @@ import reportWebVitals from './reportWebVitals';
 
 import { Header } from './pages/layouts/Header';
 import { Home } from './pages/home/Home';
+
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

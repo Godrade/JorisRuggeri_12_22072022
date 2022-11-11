@@ -16,16 +16,7 @@ export const RadarChartGraph = () => {
                 const data = await getUserPerformanceAPI();
                 setStats(data)
             } catch(err){
-                toast.error('[Performance API] Une erreur est survenue', {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
+                toast.error('[Performance API] Une erreur est survenue');
             }
         }
 
